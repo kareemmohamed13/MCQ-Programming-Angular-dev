@@ -1,0 +1,163 @@
+.login {
+    width: 60%;
+    margin: 100px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    .loginhead {
+        margin-top: -40px;
+        margin-bottom: 20px;
+
+        h2 {
+            display: inline-block;
+            padding: 5px 88px;
+            background-color: #0d6efd;
+            border-radius: 30px;
+            font-size: 28px;
+            /* margin-top: 0px; */
+            color: #FFf;
+        }
+    }
+    mat-form-field {
+        width: 100%;
+    }
+    .loginfoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        button {
+            margin-top: 15px;
+            padding: 0px 30px;
+            font-size: 18px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.alert-danger {
+    background-color: #0d6efd;
+    color:#FFF;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+#bg {
+    // background-color: #010433;
+    // width: 100%;
+    // height: 100%;
+    // display:flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+  
+  #liquid1-clip, #liquid2-clip {
+    transform-origin: 50% 50%;
+  }
+  
+  #liquid1-clip {
+    animation: swingLeft 2s ease-in-out infinite;
+  }
+  
+  #liquid2-clip {
+    animation: swingLeft 2s ease-in-out infinite;
+    animation-delay: 0.3s;
+  }
+  
+  #liquid1 {
+    transform-origin: 50% 50%;
+    animation: liquid1Fill 2s linear infinite;
+  }
+  
+  #liquid2 {
+    transform-origin: 50% 50%;
+    animation: liquid2Fill 2s linear infinite;
+  }
+  
+  #bubble1 {
+    transform-origin: 50% 50%;
+    animation: bubbleRise1 2s linear infinite;
+  }
+  
+  #bubble2 {
+    animation: bubbleRise2 2s linear infinite;
+  }
+  
+  @keyframes liquid1Fill {
+    0% {
+      transform: translate(0px,180px) scaleX(-1);
+    }
+    25% {
+      transform: translate(10px,144px) scaleX(-2);
+    }
+    50% {
+      transform: translate(0px,108px) scaleX(-3);
+    }
+    75% {
+      transform: translate(-10px,72px) scaleX(-2);
+    }
+    100% {
+      transform: translate(0px,36px) scaleX(-1);
+    }
+  }
+  
+  @keyframes liquid2Fill {
+    0% {
+      transform: translate(-5px,165px) scaleX(1);
+    }
+    25% {
+      transform: translate(-15px,129px) scaleX(3);
+    }
+    50% {
+      transform: translate(-5px,93px) scaleX(2);
+    }
+    75% {
+      transform: translate(5px,57px) scaleX(2);
+    }
+    100% {
+      transform: translate(-5px,21px) scaleX(1);
+    }
+  }
+  
+  @keyframes bubbleRise1 {
+    from {
+      transform: translate(60px,280px);
+    }
+    to {
+      transform: translate(60px,100px)
+    }
+  }
+  
+  @keyframes bubbleRise2 {
+    from {
+      transform: translate(125px,280px) rotate(45deg);
+    }
+    to {
+      transform: translate(125px,85px) rotate(45deg);
+    }
+  }
+  
+  @keyframes swingLeft {
+    0% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  @keyframes swingRight {
+    0% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }

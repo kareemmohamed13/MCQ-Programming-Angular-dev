@@ -1,0 +1,31 @@
+
+<mat-toolbar color="primary" class="navbar navbar-default py-2" dir="rtl">
+    <div class="container"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand"  routerLinkActive="active" routerLink="welcome"><img src="../../../assets/images/script-coding-programming-svgrepo-com" alt=""> امتحان مفاجئ   </a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="d-flex align-items-center">
+        <ul class="nav navbar-right d-flex align-items-center">
+          <li *ngIf="user?.role == 'doctor'" routerLinkActive="active"><a routerLink="/new-exam">أختبار جديد</a></li>
+          <li *ngIf="user?.role == 'doctor'" routerLinkActive="active"><a routerLink="/students">الجونيورز</a></li>
+          <li *ngIf="user !== null" routerLinkActive="active"><a routerLink="/subjects">لغات البرمجة </a></li>
+          <li *ngIf="user !== null" routerLinkActive="active" (click)="logout()"><a routerLink="/login">خروج</a></li>
+          <li *ngIf="user == null" routerLinkActive="active"><a routerLink="/login">دخول</a></li>
+          <li *ngIf="user == null" routerLinkActive="active"><a routerLink="/register">تسجيل</a></li>
+          <li *ngIf="user !== null" class="username">{{user?.neurotransmitter}}</li>
+          <li *ngIf="user !== null" class="username">{{user?.hermones}}</li>
+
+          <!--  -->
+          
+              
+           
+          <!--  -->
+        </ul>
+  
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </mat-toolbar>
+  

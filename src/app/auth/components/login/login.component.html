@@ -1,0 +1,118 @@
+<div class="login" >
+    <div>
+    <div id="bg" style="margin-right: 483px;
+    margin-bottom:-51px;
+    ">
+        <svg width="270" height="270"  style="height: 40px;"
+             viewBox="0 0 270 270" fill="none">
+         
+        <symbol id="liquid">
+      <path d="M0 71.0344C0 11.7849 73.6393 -15.5736 112.324 29.3037V29.3037C134.143 54.6151 171.778 58.8457 198.672 39.0103L206.818 33.002C231.973 14.4496 266.21 14.1976 291.635 32.3779V32.3779C318.355 51.4837 354.605 50.1371 379.833 29.1014L397.314 14.5252C414.946 -0.176172 439.21 -4.04721 460.54 4.43827V4.43827C484.364 13.9156 500 36.963 500 62.6028V399H0V71.0344Z" fill="#02CAF7" fill-opacity="0.5"/> 
+      </symbol>
+      <symbol id="bubbles">
+        <path d="M91 10C91 15.5228 86.5228 20 81 20C75.4772 20 71 15.5228 71 10C71 4.47715 75.4772 0 81 0C86.5228 0 91 4.47715 91 10Z" fill="#0d6e"/>
+      <path d="M20 38C20 43.5228 15.5228 48 10 48C4.47715 48 0 43.5228 0 38C0 32.4772 4.47715 28 10 28C15.5228 28 20 32.4772 20 38Z" fill="#0d6e"/>
+      <circle cx="58.5" cy="58.5" r="7.5" fill="#0d6e"/>
+      <circle cx="110.5" cy="78.5" r="7.5" fill="#0d6e"/>
+      <circle cx="131" cy="33" r="5" fill="#0d6e"/>
+      <circle cx="37" cy="111" r="5" fill="#0d6e"/>
+      </symbol>
+        <defs>
+          <clipPath id="circleClip">
+            <circle cx="135" cy="135" r="130"/>
+          </clipPath>
+        </defs>
+        
+        <g class="loader">
+          <g id="liquid1-clip" clip-path="url(#circleClip)">
+            <g>
+              <use id="liquid1"  href="#liquid" transform="translate(0,180)"/>
+              <use id="bubble1" href="#bubbles" transform="translate(60,100)"/>
+            </g>
+          </g>
+          <g id="liquid2-clip" clip-path="url(#circleClip)">
+            <g>
+              <use id="liquid2" href="#liquid" fill-opacity="0.15" transform="translate(0,175)"/>
+              <use id="bubble2" href="#bubbles" transform="translate(60,100)"/>
+            </g>
+          </g>
+          <use href="#container"/>
+        </g>
+       </svg>
+      </div>
+
+      <div id="bg" style="margin-right: -132px;
+      margin-bottom: 15px;
+      ">
+          <svg width="270" height="270"  style="height: 40px;"
+               viewBox="0 0 270 270" fill="none">
+           
+          <symbol id="liquid">
+        <path d="M0 71.0344C0 11.7849 73.6393 -15.5736 112.324 29.3037V29.3037C134.143 54.6151 171.778 58.8457 198.672 39.0103L206.818 33.002C231.973 14.4496 266.21 14.1976 291.635 32.3779V32.3779C318.355 51.4837 354.605 50.1371 379.833 29.1014L397.314 14.5252C414.946 -0.176172 439.21 -4.04721 460.54 4.43827V4.43827C484.364 13.9156 500 36.963 500 62.6028V399H0V71.0344Z" fill="#02CAF7" fill-opacity="0.5"/> 
+        </symbol>
+        <symbol id="bubbles">
+          <path d="M91 10C91 15.5228 86.5228 20 81 20C75.4772 20 71 15.5228 71 10C71 4.47715 75.4772 0 81 0C86.5228 0 91 4.47715 91 10Z" fill="#0d6e"/>
+        <path d="M20 38C20 43.5228 15.5228 48 10 48C4.47715 48 0 43.5228 0 38C0 32.4772 4.47715 28 10 28C15.5228 28 20 32.4772 20 38Z" fill="#0d6e"/>
+        <circle cx="58.5" cy="58.5" r="7.5" fill="#0d6e"/>
+        <circle cx="110.5" cy="78.5" r="7.5" fill="#0d6e"/>
+        <circle cx="131" cy="33" r="5" fill="#0d6e"/>
+        <circle cx="37" cy="111" r="5" fill="#0d6e"/>
+        </symbol>
+          <defs>
+            <clipPath id="circleClip">
+              <circle cx="135" cy="135" r="130"/>
+            </clipPath>
+          </defs>
+          
+          <g class="loader">
+            <g id="liquid1-clip" clip-path="url(#circleClip)">
+              <g>
+                <use id="liquid1"  href="#liquid" transform="translate(0,180)"/>
+                <use id="bubble1" href="#bubbles" transform="translate(60,100)"/>
+              </g>
+            </g>
+            <g id="liquid2-clip" clip-path="url(#circleClip)">
+              <g>
+                <use id="liquid2" href="#liquid" fill-opacity="0.15" transform="translate(0,175)"/>
+                <use id="bubble2" href="#bubbles" transform="translate(60,100)"/>
+              </g>
+            </g>
+            <use href="#container"/>
+          </g>
+         </svg>
+        </div>
+    </div>
+
+
+    <div class="text-center loginhead">
+        <h2>Login</h2>
+    </div>
+    <form [formGroup]="loginForm">
+        <div class="row">
+            
+            <div class="col-sm-12 mb-3">        
+                <mat-radio-group (change)="getRole($event)" formControlName="type" > 
+                    <mat-radio-button value="students" color="primary" class="w-25" >جونيور</mat-radio-button>
+                    <mat-radio-button  value="doctor"color="primary" class="w-25" >سينيور</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="col-md-6 col-sm-12">          
+                <mat-form-field appearance="outline" color="primary">                    
+                    <mat-label>الايميل</mat-label>
+                    <input matInput type="email" formControlName="email"  >
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-form-field appearance="outline" color="primary">
+                    <mat-label>كلمة المرور</mat-label>
+                    <input matInput type="password" formControlName="password"  >
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="text-right loginfoot">
+            <a routerLink="/register" color="primary">انشاء حساب ؟</a>
+            <button mat-raised-button style="background-color: #0d6efd;" (click)="submit()" >تسجيل الدخول</button>
+        </div>
+     </form>
+</div>
